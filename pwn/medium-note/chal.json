@@ -1,0 +1,11 @@
+{
+    "name": "medium-note",
+    "author": "tabuk",
+    "description": "Mistakes were made last time. It's a note editor FFS, what could possibly go wrong?\n\n`nc gold.b01le.rs 4002`",
+    "difficulty": "medium",
+    "flag": "bctf{sm4ll_0v3rfl0w_1z_571ll_b4d_0k4y}",
+    "ports": [
+        4401
+    ],
+    "can_be_auto_deployed": true
+}

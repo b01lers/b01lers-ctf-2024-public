@@ -1,0 +1,11 @@
+{
+    "name": "count_the_counter",
+    "author": "bronson113",
+    "description": "000 001 010 011 100...\n\n`nc gold.b01le.rs 5002`",
+    "difficulty": "easy",
+    "flag": "bctf{there_is_a_reason_for_random_nonce_and_with_fixed_length_8c6bf5a1398d1f1d95f1}",
+    "ports": [
+        5002
+    ],
+    "can_be_auto_deployed": true
+}

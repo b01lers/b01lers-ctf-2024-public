@@ -1,0 +1,34 @@
+body {
+    background: linear-gradient(to bottom, #4e008e, #8e2bbf);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex; /* Added */
+    justify-content: center; /* Added */
+    align-items: center; /* Added */
+    height: 100vh; /* Added */
+    margin: 0; /* Added */
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.slots {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Added */
+}
+
+.slot {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin: 0 10px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

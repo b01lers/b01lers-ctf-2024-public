@@ -1,0 +1,9 @@
+{
+    "name": "B01lersParlay",
+    "author": "vinhchilling",
+    "description": "Shazly just got hired to work on a new promising project for B01lersParlay, an organization specialized in novel wealth creation tactics. He was given a token to access the project on GitLab SAAS, but he keeps complaining he can\u2019t even clone the project nor access the URL given. The CEO, Captain Baccarat, was apparently disappointed. Can you help Shazly uncovered the secret behind this strange scammy organization?",
+    "difficulty": "medium-hard",
+    "flag": "bctf{ruby_regex_is_goated_gitlab_api_is_cursed_6688}",
+    "ports": "",
+    "can_be_auto_deployed": false
+}

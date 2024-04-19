@@ -1,0 +1,11 @@
+{
+    "name": "awpcode",
+    "author": "CygnusX",
+    "description": "The awp from cs can shoot through walls!\n\n`nc gold.b01le.rs 7001`",
+    "difficulty": "hard",
+    "flag": "bctf{python_oob_read_is_interesting>:o!!!}",
+    "ports": [
+        7070
+    ],
+    "can_be_auto_deployed": true
+}

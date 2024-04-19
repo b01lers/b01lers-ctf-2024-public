@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slots Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='slots.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="slots">
+            <div class="slot" id="slot1"></div>
+            <div class="slot" id="slot2"></div>
+            <div class="slot" id="slot3"></div>
+            <div class="slot" id="slot4"></div>
+            <div class="slot" id="slot5"></div>
+        </div>
+        <button id="roll-btn">Roll</button>
+        <a href="/">
+            <button id="back-btn">Back to Dashboard</button>
+        </a>
+    </div>
+
+    <script src="{{ url_for('static', filename='slots.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "name": "shamir-for-dummies",
+    "author": "FlaggnGoose",
+    "description": "I need to use Shamir secret sharing scheme (https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing), but my friend only knows how to do additions. Can you help me and my friend?\n\n`nc gold.b01le.rs 5006`",
+    "difficulty": "medium",
+    "flag": "bctf{P0LYN0m14l_1N_M0d_P_12_73H_P0W3Rh0u23_0F_73H_5h4M1r}",
+    "ports": [
+        5040
+    ],
+    "can_be_auto_deployed": true
+}

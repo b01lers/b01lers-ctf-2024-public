@@ -1,0 +1,9 @@
+{
+    "name": "Annnnnnny Second Now",
+    "author": "Bilbin",
+    "description": "My teacher tried telling me that my code will take around 40 billion years to run. Hah! Shows what he knows. I'm sure it'll finish any second now...",
+    "difficulty": "easy",
+    "flag": "bctf{what's_memoization?}",
+    "ports": "",
+    "can_be_auto_deployed": false
+}

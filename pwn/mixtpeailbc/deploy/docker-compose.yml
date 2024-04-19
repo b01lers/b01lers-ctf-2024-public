@@ -1,0 +1,9 @@
+version: '2.4'
+services:
+  mixtpeailbc:
+    build:
+      dockerfile: ./deploy/Dockerfile
+      context: ..
+    ports:
+      - 4238:5000
+    privileged: true

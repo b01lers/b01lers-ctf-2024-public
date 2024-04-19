@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+footer {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+header {
+    background-color: #005b94; /* Lighter blue background */
+    color: white; /* White text color */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header p {
+    margin: 0;
+}
+
+.timer {
+    font-size: 0.8em;
+    color: #999;
+}
+
+nav {
+    background-color: #333; /* Dark gray background */
+    color: #ddd; /* Light gray text color */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ddd; /* Light gray link color */
+}
+
+main {
+    flex: 1; /* Main content takes up remaining space */
+    padding: 20px;
+}
+
+section {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4f7698;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+section input[type="textarea"] {
+    width: calc(100% - 40px); /* Takes up whole width with 20px margin on each side */
+    height: calc(100vh / 6); /* 1/6 of the viewport height */
+    margin: 10px; /* 10px margin on each side */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px; /* Padding inside the text box */
+    vertical-align: top;
+    padding-top: 0; /* Remove top padding */
+    
+}

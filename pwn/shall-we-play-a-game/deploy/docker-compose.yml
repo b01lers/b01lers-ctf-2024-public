@@ -1,0 +1,7 @@
+version: '2.4'
+services:
+  shallwe:
+    build: .
+    ports:
+      - 4004:5000
+    privileged: true

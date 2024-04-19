@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo_no_text.png') }}" alt="Logo" class="logo-img">
+            <span class="logo-text">Which Game Will Pay Off Your Mortgage</span>
+        </div>
+        <ul class="nav-items">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Rules</a></li>
+            <li><a href="/scoreboard">Scoreboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard">
+        <a href="/blackjack" class="block">Blackjack</a>
+        <a href="/baccarat" class="block">Baccarat</a>
+        <a href="/poker" class="block">Poker</a>
+        <a href="/slots" class="block">Slots Machine</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

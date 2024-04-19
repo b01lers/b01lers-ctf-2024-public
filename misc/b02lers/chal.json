@@ -1,0 +1,9 @@
+{
+    "name": "b02lers",
+    "author": "King Fish",
+    "description": "The Second Coming\nhttps://discord.gg/7dUmpHnN4d",
+    "difficulty": "easy-medium",
+    "flag": "bctf{d15c0rd_1s_v3ry_w31rd_1212805713529675987}",
+    "ports": "",
+    "can_be_auto_deployed": false
+}

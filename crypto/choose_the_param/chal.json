@@ -1,0 +1,11 @@
+{
+    "name": "choose_the_param",
+    "author": "bronson113",
+    "description": "I wounder why we need to specify parameter length in the spec...\n\n`nc gold.b01le.rs 5001`",
+    "difficulty": "easy-medium",
+    "flag": "bctf{dont_let_the_user_choose_the_prime_length_>w<}",
+    "ports": [
+        5001
+    ],
+    "can_be_auto_deployed": true
+}

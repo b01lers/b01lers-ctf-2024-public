@@ -1,0 +1,11 @@
+{
+    "name": "3-city-elves-writeups",
+    "author": "VinhChilling",
+    "description": "I'm competing in a CTF so I don't have time to make my 3-city-elves challenge. How about you guys help me with the CTF I'm in by submitting some writeups? I would really appreciate it! I only need some kind of hardware hacking, like I2C, UART vulnerabilities or insulin pump hacking. Supply chain is also acceptable. Don't try to do anything silly, the writeup submission comes with a next-gen WAF. We need your help to beat Contraband Manchester United and Sigma Pony!",
+    "difficulty": "easy-medium",
+    "flag": "bctf{Lucky_you_I_did_not_code_this_stuff_in_Ruby_lasudkjklhdsfkhjkae}",
+    "ports": [
+        6543
+    ],
+    "can_be_auto_deployed": true
+}

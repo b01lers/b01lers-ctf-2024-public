@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+    boilerad:
+        container_name: b01lerad
+        build:
+            dockerfile: ./deploy/Dockerfile
+            context: ../
+        logging:
+            driver: "json-file"
+        ports:
+            - "6789:3000"

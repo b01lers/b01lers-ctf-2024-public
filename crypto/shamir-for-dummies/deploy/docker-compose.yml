@@ -1,0 +1,12 @@
+#put your docker-compose contents here and link the docker's port with your chosen external port!
+version: "3"
+services:
+  shamir-for-dummies:
+    container_name: shamir-for-dummies
+    build:
+      dockerfile: ./deploy/Dockerfile
+      context: ../
+    logging:
+      driver: "json-file"
+    ports:
+      - "5040:5040"

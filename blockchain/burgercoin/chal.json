@@ -1,0 +1,12 @@
+{
+    "name": "burgercoin",
+    "author": "CygnusX",
+    "description": "b01lers started a new burger chain called b01lerburgers!\n On your first burger purchase you get a free burgercoin token.\n\n`nc gold.b01le.rs 31337`",
+    "difficulty": "easy",
+    "flag": "bctf{you_made_b01lerburgers_go_bankrupt_rip}",
+    "ports": [
+        31337,
+        8545
+    ],
+    "can_be_auto_deployed": true
+}

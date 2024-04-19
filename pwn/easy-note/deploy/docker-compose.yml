@@ -1,0 +1,12 @@
+#put your docker-compose contents here and link the docker's port with your chosen external port!
+version: "3.7"
+services:
+    easy-note:
+        container_name: easy-note
+        build:
+            dockerfile: ./deploy/Dockerfile
+            context: ../
+        ports:
+            - "4400:4400"
+        privileged: true
+

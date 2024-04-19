@@ -1,0 +1,62 @@
+body{
+    background: grey;
+
+    text-align: center;
+    justify-content: center;
+}
+.title {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    height: 5rem;
+    width: 100%;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.numpad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32rem;
+    margin: 0 auto;
+
+    border: 2px solid #ccc;
+    padding: 1rem 0.5rem; 
+    border-radius: 0.5rem;
+}
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+.numpad button {
+    width: 10rem;
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#display {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    height: 4rem;
+    width: 31rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f0f0f0;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#display.correct{
+    background: green;
+}
+#display.wrong{
+    background: red;
+}

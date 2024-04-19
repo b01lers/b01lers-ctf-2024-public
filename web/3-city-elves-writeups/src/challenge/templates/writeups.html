@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 City Elves</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Gameboard</a></li>
+            <li><a href="#">Challenges</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Achievements</a></li>
+            <li><a href="#">Summary</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>2069 Embedded Hacking</h1>
+        <div class="timer">Time Remaining: 1d 2h 3m 4s</div>
+    </header>
+    <main>
+        <section>
+            <h2>3 City Elves Writeups</h2>
+            <p>Describe a useful hardware hacking techniques</p>
+            <input type="textarea" id="captureExplanation" placeholder="Type your explanation here...">
+            <div class="buttons">
+                <button onclick="submitExplanation()">Submit</button>
+                <button onclick="clearExplanation()">Clear</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Terms of Service | Privacy Notice</p>
+        <p>Back to top</p>
+        <p>Gameboard and registration software is available free to use.</p>
+    </footer>
+
+    <script>
+        function submitExplanation() {
+            var explanation = document.getElementById("captureExplanation").value;
+            var data = { content: explanation };
+    
+            fetch('/pentest_submitted_flags', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json(); // Parse JSON response
+                } else {
+                    throw new Error('Failed to submit explanation');
+                }
+            })
+            .then(data => {
+                // Display message from the server
+                alert(data.message);
+                clearExplanation();
+            })
+            .catch(error => {
+                console.error('Error submitting explanation:', error);
+            });
+        }
+    
+        function clearExplanation() {
+            document.getElementById("captureExplanation").value = "";
+        }
+    </script>
+    
+</body>
+</html>

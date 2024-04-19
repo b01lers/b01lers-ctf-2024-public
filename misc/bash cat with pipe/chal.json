@@ -1,0 +1,11 @@
+{
+    "name": "bash cat with pipe",
+    "author": "ky28059",
+    "description": "My terminal seems to be stuck... please help me fix it!\n\n`nc gold.b01le.rs 7002`",
+    "difficulty": "easy",
+    "flag": "bctf{owwwww_th4t_hurt}",
+    "ports": [
+        7072
+    ],
+    "can_be_auto_deployed": true
+}

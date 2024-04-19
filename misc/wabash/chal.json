@@ -1,0 +1,11 @@
+{
+    "name": "wabash",
+    "author": "CygnusX",
+    "description": "wabash, its a river, but also a new shell! Flag is in /flag.txt\n\n`nc gold.b01le.rs 7004`",
+    "difficulty": "easy",
+    "flag": "bctf{wabash:_command_not_found521065b339eb59a71c06a0dec824cd55}",
+    "ports": [
+        7071
+    ],
+    "can_be_auto_deployed": true
+}

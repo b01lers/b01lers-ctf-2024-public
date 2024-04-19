@@ -1,0 +1,11 @@
+{
+    "name": "TeXnically...",
+    "author": "FlaggnGoose, VinhChilling",
+    "description": "Technically, you can program with LaTeX! I made a program that hides the flag =D\n\n`nc gold.b01le.rs 7005`",
+    "difficulty": "easy",
+    "flag": "bctf{WH47_Y0U_533_15_WH47_Y0U_G37,_L473X}",
+    "ports": [
+        4001
+    ],
+    "can_be_auto_deployed": true
+}

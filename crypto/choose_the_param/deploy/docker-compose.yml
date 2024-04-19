@@ -1,0 +1,13 @@
+#put your docker-compose contents here and link the docker's port with your chosen external port!
+version: "3"
+services:
+    choose_the_param:
+        container_name: choose_the_param
+        build:
+            dockerfile: ./deploy/Dockerfile
+            context: ../
+        logging:
+            driver: "json-file"
+        ports:
+            - "5001:2001"
+

@@ -1,0 +1,9 @@
+{
+    "name": "half-big-rsa",
+    "author": "FlaggnGoose",
+    "description": "Prime numbers are the best numbers. So, you should let me use it for my modulus!",
+    "difficulty": "medium",
+    "flag": "bctf{Pr1M3_NUM83r5_4r3_C001_bu7_7H3Y_4r3_57r0N6_0N1Y_WH3N_7H3Y_4r3_MU171P113D_3V3N_1F_7H3Y_4r3_b1g}",
+    "ports": "",
+    "can_be_auto_deployed": true
+}

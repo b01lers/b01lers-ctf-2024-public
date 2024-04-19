@@ -1,0 +1,11 @@
+{
+    "name": "use-cache",
+    "author": "ky28059",
+    "description": "`\"use cache\"`\n\n<https://instancer.b01lersc.tf/challenge/usecache>",
+    "difficulty": "easy-medium",
+    "flag": "bctf{n3xt_g3n3r4t10n_g4m1ng}",
+    "ports": [
+        6123
+    ],
+    "can_be_auto_deployed": true
+}

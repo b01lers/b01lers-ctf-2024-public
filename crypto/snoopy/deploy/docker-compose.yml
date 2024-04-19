@@ -1,0 +1,11 @@
+version: "3"
+services:
+    snoopy:
+        container_name: snoopy_container
+        build:
+            dockerfile: ./deploy/Dockerfile
+            context: ../
+        logging:
+            driver: "json-file"
+        ports:
+            - "9104:2001"

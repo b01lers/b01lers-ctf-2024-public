@@ -1,0 +1,7 @@
+version: '2.4'
+services:
+  armchal:
+    build: .
+    ports:
+      - 4003:5000
+    privileged: true

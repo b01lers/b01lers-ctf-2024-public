@@ -1,0 +1,13 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('nomoney.jpg'); /* Replace 'path_to_your_image.jpg' with the path to your image */
+    background-size: contain; /* Adjusted to contain */
+    background-position: center;
+}

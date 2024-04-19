@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+    pwnhub:
+        container_name: pwnhub
+        build:
+            dockerfile: ./Dockerfile
+            context: .
+        logging:
+            driver: "json-file"
+        ports:
+            - "8002:5000"

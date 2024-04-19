@@ -1,0 +1,20 @@
+/bin/sh run.sh 
+If error occurs, run those three and try again:
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+sudo systemctl restart docker.socket docker.service
+
+
+docker run -it deploy_texnically
+
+In another terminal
+docker exec -it texnically bash
+This allows you to get into the container with server.py and wrapper.sh
+
+exit
+
+Then run
+
+nc localhost 4001
+
+to make sure it works.

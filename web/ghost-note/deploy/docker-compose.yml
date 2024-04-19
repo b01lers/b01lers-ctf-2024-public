@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+    ghost-note:
+        build: ../src
+        logging:
+            driver: "json-file"
+        ports:
+            - "6027:80"
+    admin-bot:
+        build: ../admin-bot
+        logging:
+            driver: "json-file"
+        ports:
+            - "6028:80"

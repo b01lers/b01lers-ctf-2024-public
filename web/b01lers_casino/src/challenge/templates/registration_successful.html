@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Successful</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+    }
+</style>
+</head>
+<body>
+    <div id="message">
+        Registration successful, you'll be redirected to the login page shortly.
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "/login";
+        }, 3000); // Redirect after 3 seconds (3000 milliseconds)
+    </script>
+</body>
+</html>

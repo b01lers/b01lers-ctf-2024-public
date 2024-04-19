@@ -1,0 +1,11 @@
+Compile first:
+	/bin/sh run.sh
+
+Then run:
+	sudo docker run -it deploy-resurrection4
+	
+On the other terminal, verify first that every file is in there (server.py and wrapper.sh):
+	sudo docker exec -it resurrection4 bash
+
+exit out, and netcat into it
+	nc localhost 5041

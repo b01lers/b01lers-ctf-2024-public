@@ -1,0 +1,11 @@
+{
+    "name": "mixtpeailbc",
+    "author": "Athryx",
+    "description": "Can you make this bytecode vm execute real code? This callenge uses the same binary as mixtape.\n\n`nc gold.b01le.rs 4003`",
+    "difficulty": "easy-medium",
+    "flag": "bctf{1dk_85a5768c4d5e5470124a}",
+    "ports": [
+        4238
+    ],
+    "can_be_auto_deployed": true
+}

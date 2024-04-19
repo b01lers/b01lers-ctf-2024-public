@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+    awpcode:
+        container_name: awpcode
+        build:
+            dockerfile: ./deploy/Dockerfile
+            context: ../
+        logging:
+            driver: "json-file"
+        ports:
+            - "7070:1337"

@@ -1,0 +1,9 @@
+{
+    "name": "chest-mix",
+    "author": "colbyjack",
+    "description": "Here's a minecraft world, the flag is on a piece of paper in the the chest by spawn, it's hard to miss.",
+    "difficulty": "easy",
+    "flag": "bctf{ch1st_ch2st_ch3st_ch4st_ch5st}",
+    "ports": "",
+    "can_be_auto_deployed": false
+}

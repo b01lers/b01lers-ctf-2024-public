@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='scoreboard.css') }}">
+</head>
+<body>
+    <div class="scoreboard-container">
+        <h1>Scoreboard</h1>
+        <table class="scoreboard-table">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Fullname</th>
+                    <th style="width: 70%;">Balance $$$</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for player in players %}
+                <tr>
+                    <td>{{ player["fullname"] }}</td>
+                    <td>
+                        <div class="progress-bar" style="width: {{ player["balance"] / 10000 }}%"></div>
+                        <span class="balance-number">{{ player["balance"] }}</span>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" class="return-button">Return to Dashboard</a>
+    </div>
+</body>
+</html>

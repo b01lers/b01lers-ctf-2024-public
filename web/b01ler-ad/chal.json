@@ -1,0 +1,11 @@
+{
+    "name": "b01ler-ad",
+    "author": "CygnusX",
+    "description": "Ads Ads Ads! Cheap too! You want an Ad on our site? Just let us know!\n\n<http://b01ler-ads.hammer.b01le.rs>",
+    "difficulty": "easy",
+    "flag": "bctf{wow_you_can_get_a_free_ad_now!}",
+    "ports": [
+        6789
+    ],
+    "can_be_auto_deployed": true
+}

@@ -1,0 +1,9 @@
+{
+	"name": "imagehost",
+	"author": "hmmm",
+	"description": "totally not reinventing the wheel...\n\n<http://imagehost.hammer.b01le.rs>",
+	"difficulty": "easy",
+	"flag": "bctf{should've_used_imgur}",
+	"ports": [6060],
+	"can_be_auto_deployed": true
+}

@@ -1,0 +1,11 @@
+{
+    "name": "easy-note",
+    "author": "tabuk",
+    "description": "It's a note editor, what could possibly go wrong?\n\n`nc gold.b01le.rs 4001`",
+    "difficulty": "easy-medium",
+    "flag": "bctf{j33z_1_d1dn7_kn0w_h34p_1z_s0_easy}",
+    "ports": [
+        4400
+    ],
+    "can_be_auto_deployed": true
+}

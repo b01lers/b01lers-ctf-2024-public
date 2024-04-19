@@ -1,0 +1,1 @@
+#define FLAG "bctf{Y0U_4rE_fUll_of_bu11****_C++_1s_@_h0rri8le_lang}"

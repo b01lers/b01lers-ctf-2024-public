@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        #logo {
+            opacity: 1;
+            height: calc(100vh / 8);
+            /* Set the height to be one-eighth of the window height */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-img">
+        <img src="{{ url_for('static', filename='logo.png') }}" id="logo">
+        <div class="content">
+            <header>Login Form</header>
+            <div id="errorDiv"></div>
+            <form id="loginForm" action="/login" method="POST">
+                <div class="field">
+                    <span class="fa fa-user"></span>
+                    <input id="username" type="text" name="username" required placeholder="Username">
+                </div>
+                <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input id="password" type="password" name="password" class="pass-key" required placeholder="Password">
+                    <span class="show">SHOW</span>
+                </div>
+                <div class="pass">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="field">
+                    <input type="submit" value="LOGIN">
+                </div>
+            </form>
+            <div class="signup">
+                Don't have account?
+                <a href="/register">Register Now</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+    
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+    
+            // Hash password using SHA-256
+            sha256(password).then(function(hashedPassword) {
+                // Send POST request to register API endpoint with hashed password
+                fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        password: hashedPassword
+                    })
+                })
+                .then(response => {
+                    if (response.status === 200) {
+                        return response.json(); // Proceed to next `then` block if response status is 200
+                    } else {
+                        // Parse response body as JSON
+                        return response.json().then(data => {
+                        throw new Error('Login failed: ' + data.error); // Throw an error with JSON content
+                    });
+                    }
+                })
+                .then(data => {
+                    console.log(data);
+                    // Redirect to main page upon successful registration
+                    document.cookie = "jwt="+ data.jwt + "; path=/"
+                    window.location.href = "/";
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Display error message in error span
+                    var errorMessage = document.getElementById('errorMessage');
+                    var errorDiv = document.getElementById('errorDiv');
+                    if (!errorMessage) {
+                        // Create errorMessage span if it doesn't exist
+                        errorMessage = document.createElement('span');
+                        errorMessage.id = 'errorMessage';
+                        errorDiv.appendChild(errorMessage);
+                    }
+                    // Set error message text
+                    errorMessage.textContent = error.message;
+                });
+            }).catch(function(error) {
+                console.error('Error:', error);
+            });
+        });
+    
+    
+        // Function to hash password using SHA-256
+        async function sha256(message) {
+            const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
+            const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // hash the message
+            const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
+            const hashHex = hashArray
+                .map((b) => b.toString(16).padStart(2, "0"))
+                .join(""); // convert bytes to hex string
+            return hashHex;
+        }
+        </script>
+</body>
+</html>

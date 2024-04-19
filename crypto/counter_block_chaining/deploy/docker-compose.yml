@@ -1,0 +1,12 @@
+#put your docker-compose contents here and link the docker's port with your chosen external port!
+version: "3"
+services:
+    counter_block_chaining:
+        container_name: counter_block_chaining
+        build:
+            dockerfile: ./deploy/Dockerfile
+            context: ../
+        logging:
+            driver: "json-file"
+        ports:
+            - "5003:2001"

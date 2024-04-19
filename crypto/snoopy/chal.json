@@ -1,0 +1,11 @@
+{
+    "name": "Snoopy",
+    "author": "dm",
+    "description": "This looks like an un-ruh-hack-able nut, my friends. But my nose says: snoop sniff out the way!\n\n`nc gold.b01le.rs 5007`",
+    "difficulty": "medium-hard",
+    "flag": "bctf{:p_AlW4y5_lLl?!%}",
+    "ports": [
+        1001
+    ],
+    "can_be_auto_deployed": true
+}

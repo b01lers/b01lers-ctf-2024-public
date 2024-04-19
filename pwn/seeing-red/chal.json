@@ -1,0 +1,11 @@
+{
+    "name": "seeing-red",
+    "author": "CaptainNapkins",
+    "description": "Didn't sleep for three nights while staring at ticketmaster waiting to get out of the Eras queue and I get sick on the day of, smh. Anyway, if you can find my ticket you can go!",
+    "difficulty": "easy",
+    "flag": "bctf{dr1ving_a_n3w_maser@t1_d0wn_@_d3ad_3nd_str33t_eb30c235cde76705}",
+    "ports": [
+        4008
+    ],
+    "can_be_auto_deployed": true
+}

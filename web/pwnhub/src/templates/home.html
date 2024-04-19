@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PwnHub - Home</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/home.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            {% if user %}
+            <h1>Welcome to PwnHub {{ user.name }}</h1>
+            {% else %}
+            <h1>Welcome to PwnHub</h1>
+            {% endif %}
+            <nav>
+                <ul>
+                    {% if user %}
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/createpost">Create Post</a></li>
+                    {% else %}
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Unlocking the Power of Technology</h2>
+            <p>Welcome to PwnHub, your gateway to the world of technology and innovation.</p>
+            <a href="{{ url_for('static', filename='styles/pwnhub.png') }}" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="feature-item">
+                <h3>Web Development</h3>
+                <p>From simple websites to complex web applications, we've got you covered.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Mobile App Development</h3>
+                <p>Turn your ideas into reality with our mobile app development services.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Security Solutions</h3>
+                <p>Protect your digital assets with our cutting-edge security solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PwnHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

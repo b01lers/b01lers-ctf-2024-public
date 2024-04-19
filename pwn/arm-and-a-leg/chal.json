@@ -1,0 +1,11 @@
+{
+    "name": "arm-and-a-leg",
+    "author": "CaptainNapkins",
+    "description": "Ever needed to buy something that cost an ARM and a leg? Well, now you can!\n\n`nc arm-and-a-leg.gold.b01le.rs 1337`",
+    "difficulty": "medium",
+    "flag": "bctf{c0st_y@_@n_ARM_@nd_a_l3g!_a1659d0e634100240e6}",
+    "ports": [
+        4003
+    ],
+    "can_be_auto_deployed": true
+}

@@ -1,0 +1,12 @@
+Compile first:
+	/bin/sh run.sh
+
+Then run:
+	docker run -it deploy_shamir-for-dummies
+	
+On the other terminal, verify first that every file is in there (server.py and wrapper.sh):
+	docker exec -it shamir-for-dummies bash
+
+exit out, and netcat into it
+	nc localhost 5040
+	

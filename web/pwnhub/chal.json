@@ -1,0 +1,11 @@
+{
+    "name": "pwnhub",
+    "author": "CygnusX",
+    "description": "A fun place to share all your exploits with others! I'm still working on developing some parts though\n\n<http://pwnhub.hammer.b01le.rs>",
+    "difficulty": "medium",
+    "flag": "bctf{another_ssti?_ANOTHER_SSTI???!?_AREYOUSERIOUSSS7883b5ad6b0551fb816e64c8c98f4948}",
+    "ports": [
+        6969
+    ],
+    "can_be_auto_deployed": true
+}

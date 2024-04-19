@@ -1,0 +1,11 @@
+{
+    "name": "js-safe",
+    "author": "bronson113",
+    "description": "Crack the safe...\n\n<http://gold.b01le.rs:4006>",
+    "difficulty": "easy-medium",
+    "flag": "bctf{345y-p4s5w0rd->w<}",
+    "ports": [
+        3001
+    ],
+    "can_be_auto_deployed": true
+}

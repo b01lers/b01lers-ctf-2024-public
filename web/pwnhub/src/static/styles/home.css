@@ -1,0 +1,92 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    height: 1.5rem;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 3rem;
+    float: right;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.features {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.feature-item {
+    margin-bottom: 40px;
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cc0000;
+    margin-bottom: 10px;
+}

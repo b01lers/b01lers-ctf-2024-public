@@ -1,0 +1,11 @@
+{
+    "name": "R(esurre)C(tion)4",
+    "author": "FlaggnGoose",
+    "description": "RC4 really can't be *that* bad. See, I am sampling a new key at each iteration, and I am even using XOR, i.e. one-time pad (right?), to exchange two values! Maybe we should use RC4 again!\n\n`nc gold.b01le.rs 5004`",
+    "difficulty": "easy-medium",
+    "flag": "bctf{1f_gOOgL3_541D_1T_15_b4D_Th3n_1T_15_b4D}",
+    "ports": [
+        5041
+    ],
+    "can_be_auto_deployed": true
+}

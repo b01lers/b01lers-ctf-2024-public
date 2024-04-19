@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+    wabash:
+        container_name: wabash
+        image: 'wabash'
+        build:
+            dockerfile: ./deploy/Dockerfile
+            context: ..
+        logging:
+            driver: "json-file"
+        ports:
+            - "7071:1337"
+        privileged: true

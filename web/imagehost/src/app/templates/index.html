@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Letters</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="/static/index.css" />
+	</head>
+
+	<body>
+		<main>
+			<div id="image-card" class="card">
+				{% if images %}
+				<div id="image-grid">
+					{% for image in images %}
+					<div class="item"><img src="/view/{{ image }}" /></div>
+					{% endfor %}
+				</div>
+				{% else %}
+				<div>No images yet</div>
+				{% endif %}
+			</div>
+			<form method="POST" id="upload" enctype="multipart/form-data" class="card">
+				<label>Image: <input name="image" type="file" /></label>
+				<input type="submit" value="Upload" />
+			</form>
+			{% if error %}
+			<div class="alert alert-danger" id="message">{{ error }}</div>
+			{% endif %}
+			<a href="/logout">Logout</a>
+		</main>
+		<script src="/static/index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "name": "cppjail",
+    "author": "pawnlord",
+    "description": "I've come to the conclusion that any programmer that would prefer the project to be in C++ over C is likely a programmer that I really *would* prefer to piss off, so that he doesn't come and screw up any project I'm involved with. Flag length is 53.\n\n`nc gold.b01le.rs 7003`",
+    "difficulty": "medium-hard",
+    "flag": "bctf{Y0U_4rE_fUll_of_bu11****_C++_1s_@_h0rri8le_lang}",
+    "ports": [
+        7170
+    ],
+    "can_be_auto_deployed": true
+}

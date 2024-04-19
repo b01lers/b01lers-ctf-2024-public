@@ -1,0 +1,9 @@
+{
+    "name": "catch-me-if-you-can",
+    "author": "bronson113",
+    "description": "I give you this flag generator, but it's too slow. You need to speed up to catch me =D",
+    "difficulty": "medium-hard",
+    "flag": "bctf{we1rd_pyth0nc0d3_so1v3_w1th_f4s7_M47r1x_Mu1t}",
+    "ports": "",
+    "can_be_auto_deployed": false
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Propagating Counter Block Chaining",
+    "author": "bronson113",
+    "description": "Another counter mode challenge\n\n`nc gold.b01le.rs 5003`",
+    "difficulty": "medium",
+    "flag": "bctf{adding_ctr_mode_doesn't_provide_any_security_to_padding_oracle..._c850d60d210169}",
+    "ports": [
+        5003
+    ],
+    "can_be_auto_deployed": true
+}

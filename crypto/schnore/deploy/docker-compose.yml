@@ -1,0 +1,11 @@
+#put your docker-compose contents here and link the docker's port with your chosen external port!
+services:
+  schnore:
+    container_name: schnore
+    build:
+      dockerfile: ./deploy/Dockerfile
+      context: ../
+    logging:
+      driver: "json-file"
+    ports:
+      - "5093:1337"

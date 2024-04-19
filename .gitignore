@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+.idea
+.env
+.next
+.node_modules
+.mypy_cache
+

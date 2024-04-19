@@ -1,0 +1,9 @@
+{
+	"name": "ghost-note",
+	"author": "hmmm",
+	"description": "Check out my new secure note-taking app! Note: Admin bot uses Chrome w/ Ghostery v8.12.8\n\nghost note page: <http://ghost-note.hammer.b01le.rs>\nadmin bot: <http://admin-ghost-note.hammer.b01le.rs>",
+	"difficulty": "easy-medium",
+	"flag": "bctf{mayday_mayday}",
+	"ports": [6027],
+	"can_be_auto_deployed": true
+}

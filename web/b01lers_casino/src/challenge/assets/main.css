@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', Arial, sans-serif; /* Change font family */
+    background-image: url('lobby.jpg');
+    background-size: cover;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 80px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo-text {
+    color: red; /* Text color */
+    font-size: 40px; /* Font size */
+    font-weight: bold;
+    font-family: 'Titillium Web', Arial, sans-serif; /* Use Titillium Web */
+    margin-left: 30px; /* Adjust as needed */
+}
+
+.navbar .nav-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .nav-items li {
+    margin-left: 20px;
+}
+
+.navbar .nav-items li:first-child {
+    margin-left: 0;
+}
+
+.navbar .nav-items li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for color change */
+    font-size: 20
+}
+
+.navbar .nav-items li a:hover {
+    color: red; /* Change color to red on hover */
+}
+
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100vh - 60px); /* 100% viewport height - navbar height */
+}
+
+.block {
+    text-decoration: none;
+    width: 15%; /* Adjust as needed */
+    height: 15vh; /* 15% of viewport height */
+    background: linear-gradient(to right, #030303, #fc0202); /* Initial gradient */
+    display: flex; /* Use flexbox to center text vertically and horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: 'Titillium Web', Arial, sans-serif; /* Use Titillium Web */
+    margin-bottom: 5vh; /* Margin between blocks */
+    font-size: 2em; /* Increase text size */
+    font-weight: bold; /* Bold text */
+    color: white; /* Text color */
+    animation: blink 1s infinite alternate; /* Animation for blinking effect */
+    user-select: none;
+}
+
+@keyframes blink {
+    0% {
+        background: linear-gradient(to right, #030303, #fc0202); /* Initial gradient */
+    }
+    50% {
+        background: linear-gradient(to right, #fc0202, #030303); /* Switch gradient */
+    }
+    100% {
+        background: linear-gradient(to right, #030303, #fc0202); /* Back to initial gradient */
+    }
+}

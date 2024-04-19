@@ -1,0 +1,9 @@
+#put your docker-compose contents here and link the docker's port with your chosen external port!
+version: "3.7"
+services:
+    imagehost:
+        build: ../src
+        logging:
+            driver: "json-file"
+        ports:
+            - "6060:80"

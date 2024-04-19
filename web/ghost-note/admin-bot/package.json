@@ -1,0 +1,21 @@
+{
+	"name": "admin-bot",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "concurrently npm:start:*",
+		"start:submit": "PORT=8080 nodemon -L src/submit.js",
+		"start:visit": "PORT=8081 nodemon -L src/visit.js"
+	},
+	"dependencies": {
+		"fast-ratelimit": "^3.0.1",
+		"got": "^11.8.2",
+		"mustache": "^4.2.0",
+		"puppeteer": "^22.6.2",
+		"raw-body": "^2.5.2"
+	},
+	"devDependencies": {
+		"concurrently": "^8.2.2",
+		"nodemon": "^3.1.0"
+	}
+}

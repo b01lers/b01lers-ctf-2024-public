@@ -1,0 +1,11 @@
+{
+    "name": "b01lers_casino",
+    "author": "VinhChilling",
+    "description": "Do you know you just need to win 40 times in a row to become the richest person in the world? That's it! Screw real estates, stocks, cryptos, NVIDIA hypes, and behold the truest method of wealth generation! Unbiased, all justice!\n\n<https://instancer.b01lersc.tf/challenge/boilerscasino>",
+    "difficulty": "easy-medium",
+    "flag": "bctf{how_can_a_casino_put_that_much_trust_on_client_uhmm_clientside}",
+    "ports": [
+        6789
+    ],
+    "can_be_auto_deployed": true
+}

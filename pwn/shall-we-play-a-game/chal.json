@@ -1,0 +1,11 @@
+{
+    "name": "shall-we-play-a-game",
+    "author": "CaptainNapkins",
+    "description": "Shall we play a game?\n\n`nc gold.b01le.rs 4004`",
+    "difficulty": "easy",
+    "flag": "bctf{h0w_@bo0ut_a_n1ce_g@m3_0f_ch3ss?_ccb7a268f1324c84}",
+    "ports": [
+        4005
+    ],
+    "can_be_auto_deployed": true
+}

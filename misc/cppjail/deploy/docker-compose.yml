@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+    cppjail:
+        container_name: cppjail
+        build:
+            dockerfile: ./deploy/Dockerfile
+            context: ../
+        logging:
+            driver: "json-file"
+        ports:
+            - "7170:1337"

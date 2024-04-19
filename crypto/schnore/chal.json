@@ -1,0 +1,11 @@
+{
+    "name": "schnore",
+    "author": "enigcryptist",
+    "description": "I can't seem to adapt to my new sleep schedule, too tired to interact right now...\n\n`nc gold.b01le.rs 5005`",
+    "difficulty": "easy",
+    "flag": "bctf{t00_t1r3d_t0_n0t1c3_m1551n9_pub_k3y_1n_5t4t3m3nt}",
+    "ports": [
+        5093
+    ],
+    "can_be_auto_deployed": true
+}

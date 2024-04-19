@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+    cat-with-pipe:
+        container_name: cat-with-pipe
+        image: 'cat-with-pipe'
+        build:
+            dockerfile: ./deploy/Dockerfile
+            context: ..
+        logging:
+            driver: "json-file"
+        ports:
+            - "7072:1337"
+        privileged: true
