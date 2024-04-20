@@ -14,8 +14,6 @@ g = 2317405926596783304448965569170559254890432268909009119148490011160783436964
 
 A = 30210424620845820052071225945109142323820182565373787589801116895962027171575049058295156742156305996469210267854774935518505743920438652976152675486476209694284460060753584821225066880682226097812673951158980930881565165151455761750621260912545169247447437218263919470449873682069698887953001819921915874928002568841432197395663420509941263729040966054080025218829347912646803956034554112984570671065110024224236097116296364722731368986065647624353094691096824850694884198942548289196057081572758803944199342980170036665636638983619866569688965508039554384758104832379412233201655767221921359451427988699779296943487
 
-flag = "bctf{fake_flag}"
-
 #  https://eli.thegreenplace.net/2009/03/07/computing-modular-square-roots-in-python
 def modp_qr(a, p):
     """ Find a quadratic residue (mod p) of 'a'. p
@@ -97,8 +95,6 @@ def modp_qr(a, p):
         x = (x * gs) % p
         b = (b * g) % p
         r = m
-
-
 def legendre_symbol(a, p):
     """ Compute the Legendre symbol a|p using
         Euler's criterion. p is a prime, a is
@@ -111,67 +107,55 @@ def legendre_symbol(a, p):
     ls = pow(a, (p - 1) // 2, p)
     return -1 if ls == p - 1 else ls
 
+
+
+# Or use b01lers CTF URL and port
 nc = remote("127.0.0.1", 5093)
 
-# Can be anything, don't care
-#nc.recvuntil(b"a = ")
-#a = 69
-#nc.sendline(str(a).encode())
-
-#nc.recvuntil(b'A = ')
-#while 1:
-#    A = pow(g, random.randrange(1,p), p)
-
-    # Trial-hash c = H(A) mod p (see below)
-#    h = SHA512.new(truncate="256")
-#    h.update(number.long_to_bytes(A))
-#    c = number.bytes_to_long(h.digest()) % p
-
-    # Roughly half of values c will be invertible modulo p-1 due to modulus being even; sample randomly until you find one
-#    try: 
-#        cexpinv = pow(c, -1, p-1)
-#        break
-#    except:
-#        continue
-#nc.sendline(str(A).encode())
-
 nc.recvuntil(b"a + cx = ")
+# We don't know x, and we don't have to listen to the protocol :)
 z = random.randrange(1,p)
 nc.sendline(str(z).encode())
 
+# Verifier sleepby and forgot to ask for X. We can work with this!
 nc.recvuntil(b'X = ')
 
+# Compute the same challenge the verifier will
 h = SHA512.new(truncate="256")
 h.update(number.long_to_bytes(g) + number.long_to_bytes(p) + number.long_to_bytes(A))
 c = number.bytes_to_long(h.digest()) % p
 
-# Adaptive attacker knows random A,z it chose & associated challenge c by now,
-# so rearrange verification equation to solve for public key X:
+# Adaptive attacker knows random (A,z) it chose & associated challenge c by now,
+# so X is the only unknown. Rearrange verification equation to solve for public key X!
 # g^z ?= A * X^c
 # X := (A^{-1} * g^z)^(c^{-1} mod phi(p)) mod p
-# or X = (Z/A)^(1/c mod p-1) mod p
+# or X = (g^z / A)^(1/c mod p-1) mod p
 phip = p - 1
-# value of hash challenge c isn't guaranteed to be divisible modulo phi(p) = p-1 to compute X, however...
-# Indeed, gcd(c, p-1) = 2 (i.e. shares common factor 2), so c isn't directly invertible in the exponent
-# So compute c^{-1}' such that (c/2)c^{-1}' = 1 mod (p-1)/2 instead
+# Value of hash challenge c isn't guaranteed to be divisible modulo phi(p) = p-1 to compute X, however...
+# We can observe that gcd(c, p-1) = 2 != 1 (i.e. shares common factor 2), so c isn't directly invertible in the exponent
+# But we can at least compute c^{-1}' such that (c/2)c^{-1}' = 1 mod (p-1)/2
 factors = math.gcd(c, phip)
 print("gcd(c, p-1) = ", factors)
 cinvp = pow(c // factors, -1, phip // factors)
 # We get most of the way to computing X by appling this:
 # X' := (A^{-1} * g^z)^(c^{-1}' mod p-1) mod p
-# X' = (Z/A)^(2/c mod p-1) mod p
-# (cf. above -- simply need to "square root" (find quadratic residue)!)
+# X' = (g^z / A)^(2/c mod p-1) mod p = X^2 mod p
 Z = pow(g, z, p)
 Ainv = pow(A, -1, p)
-Xp = pow(Ainv * Z, cinvp, p)
+Xprime = pow(Ainv * Z, cinvp, p)
 
-# And so, if we simply find the quadratic residues of X', we have two candidates to try.
-# Use Tonelli-Shanks
-Xqr1 = modp_qr(Xp, p) % p
+# See above -- we have X' = X^2, now we simply need "square root" (quadratic residue) of X^2.
+# And so, if we find the quadratic residues of X', we have two candidates to try.
+# Use Tonelli-Shanks to find the first...
+Xqr1 = modp_qr(Xprime, p) % p
+# ... and if we know one we know the other, since (p-X)^2 = p^2 - 2pX + X^2 = X^2 mod p
 Xqr2 = (p-Xqr1) % p
 
 #X = pow(Z * Ainv, cexpinv, p)
+# But the first one works in this example.
 nc.sendline(str(Xqr1).encode())
 
+# Flag!
 nc.recvuntil(b'> ')
 print(nc.recv().decode().strip())
+nc.interactive()
