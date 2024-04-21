@@ -1,3 +1,3 @@
 # Writeup for library_of_<?php by CygnusX
 
-Will add a writeup here later. This is a placeholder.
+Writeup Here: `https://blog.neilhommes.xyz/docs/Writeups/2024/bctf.html#library-of-php---mediumi`
