@@ -1,0 +1,33 @@
+apiVersion: "klodd.tjcsec.club/v1"
+kind: Challenge
+metadata:
+  name: libraryofphp 
+spec:
+  name: libraryofphp # 
+  timeout: 300000 # 
+  pods:
+    - name: libraryofphp # 
+      ports: # 
+        - port: 80
+      spec: # 
+        containers:
+          - name: main
+            image: localhost:5000/libraryofphp:latest
+            resources:
+              requests:
+                memory: 100Mi
+                cpu: 75m
+              limits:
+                memory: 250Mi
+                cpu: 100m
+        automountServiceAccountToken: false
+  expose:
+    kind: http # 
+    pod: libraryofphp # 
+    port: 80
+  middlewares: # 
+    - contentType:
+        autoDetect: false
+    - rateLimit:
+        average: 5
+        burst: 10

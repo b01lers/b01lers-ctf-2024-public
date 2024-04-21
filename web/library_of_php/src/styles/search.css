@@ -1,0 +1,36 @@
+/* Basic styling for the purple PHP-colored navbar */
+.navbar {
+    background-color:#777BB3; /* Purple color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding for navbar items */
+    display: flex; /* Flex layout to align items horizontally */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-brand {
+    font-size: 24px; /* Adjust as needed */
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff; /* White text color */
+}
+
+.navbar-links {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    display: inline; /* Display items inline */
+    margin-left: 20px; /* Adjust spacing between items */
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+}
+
+.navbar-links li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

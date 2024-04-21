@@ -1,0 +1,9 @@
+{
+    "name": "library_of_<?php",
+    "author": "CygnusX",
+    "description": "The flag should show up eventually... Right?\n\n<https://instancer.b01lersc.tf/challenge/libraryofphp>",
+    "difficulty": "medium",
+    "flag": "bctf{babel_really_contains_everything_even_the_flag!!:o_b25a5cdfbd25d94c62eb68cc1ee6f5a77def91bc}",
+    "ports": [],
+    "can_be_auto_deployed": false
+}
