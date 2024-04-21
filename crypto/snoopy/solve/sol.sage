@@ -1,5 +1,8 @@
+import os
 from pwn import *
 from Crypto.Cipher import AES
+from numba import jit
+import numpy as np
 
 
 def readBasis(fname):
@@ -30,13 +33,20 @@ def snoopValues(msg, basis):
   return values
 
 
+##
+# create basis, if none
+##
+basisFile = "basis32.dat"
+if not os.path.isfile(basisFile):
+  os.system(f"python3 create_basis.py {basisFile} 256")
+
 
 ##
 # connect to challenge
 ##
 
 #r = process(["python3", "snoopy.py"])
-r = remote("localhost", 9104)
+r = remote("gold.b01le.rs", 5007)
 
 r.recvuntil(b">")
 
@@ -63,10 +73,8 @@ print(len(data), data)
 # SOLVE
 ##
 
-# write basis
-
 # read basis
-basis = readBasis("basis32.dat")
+basis = readBasis(basisFile)
 
 Nsnoop = len(data)
 N = len(basis)
@@ -168,6 +176,7 @@ print(f"key RECO: {keyReco}")
 
 
 # decrypt
+print(f"flag candidates:")
 for b in range(0x10000):
   keyCand = [int(b & 0xff), int(b >> 8)] + keyReco[2:]
   aes = AES.new(bytes(keyCand)*4, AES.MODE_ECB)
@@ -176,4 +185,7 @@ for b in range(0x10000):
     for k in range(4):  ctxtCand[k * 4] ^^= (i >> k) & 1
     flagCand = aes.decrypt(bytes(ctxtCand))
     if any( [ v >= 0x80 or v <= 0x20    for v in flagCand] ):  continue
-    print(b, i, flagCand)
+    print(b, i, b"bctf{" + flagCand + b"}")
+
+
+#bctf{:p_AlW4y5_lLl?!%}
