@@ -1,0 +1,9 @@
+version: '2.4'
+services:
+  b01lers_bracket:
+    build:
+      dockerfile: ./deploy/Dockerfile
+      context: ..
+    ports:
+      - 3082:5000
+    privileged: true

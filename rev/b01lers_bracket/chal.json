@@ -1,0 +1,11 @@
+{
+    "name": "b01lers_bracket",
+    "author": "Athryx",
+    "description": "How good are your bracketology skills?\n\n`nc gold.b01le.rs 4007`",
+    "difficulty": "easy-medium",
+    "flag": "bctf{sh01lDv3_us3d_a_r34l_RnG_57e22f5af0c0c908b67a}",
+    "ports": [
+        3082
+    ],
+    "can_be_auto_deployed": true
+}

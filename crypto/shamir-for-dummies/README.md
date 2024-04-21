@@ -14,13 +14,17 @@ Following the notations in https://en.wikipedia.org/wiki/Shamir%27s_secret_shari
 Based on <code>server.py</code>, our 'friend' is running the reconstruction algorithm for additive secret sharing scheme (modulo some 'weight' that he has to divide in the end) with the shares generated using Shamir secret sharing scheme. Both Shamir and additive SS are linear secret sharing schemes based on linear codes; that is, the secret $s$ can be written as a linear combination of $k$ shares among $n$ shares $s_1, \dots, s_n$, making Shamir SS basically Additive SS with some 'weights' when $n = k$. However, in this problem, the choice of 'weight' is limited; we need to generate shares $s_1, \dots, s_n$ and find the weight $\lambda$ such that $\lambda^{-1} s_1 + \cdots + \lambda^{-1} s_n = s$, or $s_1 + \cdots + s_n = \lambda s$ equivalently. 
 
 Let $\omega$ be a non-trivial $n$-th root of unity modulo $p$; that is, $\omega^n = 1 \mod p$ where $\omega \neq 1 \mod p$. Moreover, the following equality holds
+
 $$
 1 + \omega + \cdots + \omega^{n-1} = 0 \mod p
 $$
+
 If in particular we choose $\omega$ to be a primitive $n$-th root of unity modulo $p$, then $\omega, \omega^2, \cdots, \omega^{n-1}, \omega^n = 1$ are all distinct and are solutions to the equation $x^n - 1 = 0 \mod p$. 
 The existence of such $\omega$ is guaranteed when we have $p$ a prime and $p = 1 \mod n$ which <code>server.py</code> does. Also, by choosing $n$ to be prime, any non-trivial $n$-th root of unity would also be primitive. 
 
 Denote $P(X) = s + c_1 X + c_2 X^2 + \cdots + c_{n-1} X^{n-1}$ (note that since $k = n$, it should be a degree $n-1$ polynomial). Then
+
+$$
 \begin{align*}
 \sum_{i=1}^n P(\omega^i)
 & = sn + c_1 \sum_{i=1}^n \omega^i + \cdots + c_{n-1} \sum_{i=1}^n (\omega^i)^{n-1} \\
@@ -29,6 +33,7 @@ Denote $P(X) = s + c_1 X + c_2 X^2 + \cdots + c_{n-1} X^{n-1}$ (note that since 
 & = sn + c_1 (0) + \cdots + c_{n-1} 0 \mod p \\
 & = sn \mod p
 \end{align*}
+$$
 
 Finding the $n$-th root of unity $\omega$ can be seen as finding the (cyclic) subgroup of size $n$ in $F_p$, and this can be done via exhaustive search: find $g$ such that $g^{\frac{p-1}{n}} \neq 1 \mod p$ (see https://en.wikipedia.org/wiki/Primitive_root_modulo_n#Finding_primitive_roots).
 

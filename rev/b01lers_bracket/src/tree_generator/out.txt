@@ -1,0 +1,296 @@
+   Compiling tree_generator v0.1.0 (/home/jack/projects/ctf/make_ctf/2024-bctf/b01lers-ctf-2024/rev/b01lers_bracket/src/tree_generator)
+warning: field `correct` is never read
+  --> src/main.rs:24:5
+   |
+18 | struct Tree {
+   |        ---- field in this struct
+...
+24 |     correct: [u32; STATE_SIZE],
+   |     ^^^^^^^
+   |
+   = note: `Tree` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` on by default
+
+warning: `tree_generator` (bin "tree_generator") generated 1 warning
+    Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+     Running `target/debug/tree_generator`
+data: [4230898793, 2785906100, 3262965705, 2894277172]
+correct: [156312719, 1545624961, 2734284338, 3211423851]
+===== inorder round ======
+n: 4230898793
+node color: Red
+tree level: 2
+start n: 4230898793
+xor n: 3043851484
+rotate n: 3639734534
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 3676192288
+===== inorder round ======
+n: 2785906100
+node color: Black
+tree level: 1
+start n: 2785906100
+xor n: 3562277497
+rotate n: 3254998843
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 1793554496
+===== inorder round ======
+n: 3262965705
+node color: Black
+tree level: 0
+start n: 3262965705
+xor n: 116742953
+rotate n: 2129561426
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 3505016797
+===== inorder round ======
+n: 2894277172
+node color: Black
+tree level: 1
+start n: 2894277172
+xor n: 3670648569
+rotate n: 2207770192
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 4241100914
+initial state: [3676192288, 1793554496, 3505016797, 4241100914]
+next state: [3612123785, 284493300, 2473015206, 2840410790]
+===== inorder round ======
+n: 4230898793
+node color: Black
+tree level: 1
+start n: 4230898793
+xor n: 712302894
+rotate n: 1206414580
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 228493565
+===== inorder round ======
+n: 2785906100
+node color: Black
+tree level: 0
+start n: 2785906100
+xor n: 3934650644
+rotate n: 4241579094
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 730521498
+===== inorder round ======
+n: 3262965705
+node color: Red
+tree level: 2
+start n: 3262965705
+xor n: 2075918396
+rotate n: 61332551
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 3765762952
+===== inorder round ======
+n: 2894277172
+node color: Black
+tree level: 1
+start n: 2894277172
+xor n: 3670648569
+rotate n: 2207770192
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 4241100914
+initial state: [228493565, 730521498, 3765762952, 4241100914]
+next state: [164425062, 3516427598, 2733761361, 2840410790]
+===== inorder round ======
+n: 4230898793
+node color: Black
+tree level: 1
+start n: 4230898793
+xor n: 712302894
+rotate n: 1206414580
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 228493565
+===== inorder round ======
+n: 2785906100
+node color: Red
+tree level: 2
+start n: 2785906100
+xor n: 1598858791
+rotate n: 1226570597
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 2837675884
+===== inorder round ======
+n: 3262965705
+node color: Black
+tree level: 0
+start n: 3262965705
+xor n: 116742953
+rotate n: 2129561426
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 3505016797
+===== inorder round ======
+n: 2894277172
+node color: Black
+tree level: 1
+start n: 2894277172
+xor n: 3670648569
+rotate n: 2207770192
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 4241100914
+initial state: [228493565, 2837675884, 3505016797, 4241100914]
+next state: [164425062, 1328614688, 2473015206, 2840410790]
+===== inorder round ======
+n: 4230898793
+node color: Black
+tree level: 1
+start n: 4230898793
+xor n: 712302894
+rotate n: 1206414580
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 228493565
+===== inorder round ======
+n: 2785906100
+node color: Black
+tree level: 0
+start n: 2785906100
+xor n: 3934650644
+rotate n: 4241579094
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 730521498
+===== inorder round ======
+n: 3262965705
+node color: Black
+tree level: 1
+start n: 3262965705
+xor n: 4039337102
+rotate n: 2295904501
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 387887387
+===== inorder round ======
+n: 2894277172
+node color: Red
+tree level: 2
+start n: 2894277172
+xor n: 1707229863
+rotate n: 1016857102
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 3348332609
+initial state: [228493565, 730521498, 387887387, 3348332609]
+next state: [164425062, 3516427598, 3650853092, 1947642485]
+===== inorder round ======
+n: 4230898793
+node color: Red
+tree level: 2
+start n: 4230898793
+xor n: 3043851484
+rotate n: 3639734534
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 3676192288
+===== inorder round ======
+n: 2785906100
+node color: Black
+tree level: 1
+start n: 2785906100
+xor n: 3562277497
+rotate n: 3254998843
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 1793554496
+===== inorder round ======
+n: 3262965705
+node color: Red
+tree level: 0
+start n: 3262965705
+xor n: 116742953
+rotate n: 2129561426
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 1339937002
+===== inorder round ======
+n: 2894277172
+node color: Black
+tree level: 1
+start n: 2894277172
+xor n: 3670648569
+rotate n: 2207770192
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 4241100914
+initial state: [3676192288, 1793554496, 1339937002, 4241100914]
+next state: [3612123785, 284493300, 307935411, 2840410790]
+
+
+
+===== inorder round ======
+n: 4230898793
+node color: Black
+tree level: 1
+start n: 4230898793
+xor n: 712302894
+rotate n: 1206414580
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 228493565
+===== inorder round ======
+n: 2785906100
+node color: Red
+tree level: 0
+start n: 2785906100
+xor n: 3934650644
+rotate n: 4241579094
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 3751422858
+===== inorder round ======
+n: 3262965705
+node color: Red
+tree level: 2
+start n: 3262965705
+xor n: 2075918396
+rotate n: 61332551
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 3765762952
+===== inorder round ======
+n: 2894277172
+node color: Black
+tree level: 1
+start n: 2894277172
+xor n: 3670648569
+rotate n: 2207770192
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 4241100914
+initial state: [228493565, 3751422858, 3765762952, 4241100914]
+next state: [164425062, 2242361662, 2733761361, 2840410790]
+
+
+
+===== inorder round ======
+n: 4230898793
+node color: Black
+tree level: 1
+start n: 4230898793
+xor n: 712302894
+rotate n: 1206414580
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 228493565
+===== inorder round ======
+n: 2785906100
+node color: Red
+tree level: 2
+start n: 2785906100
+xor n: 1598858791
+rotate n: 1226570597
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 2837675884
+===== inorder round ======
+n: 3262965705
+node color: Red
+tree level: 0
+start n: 3262965705
+xor n: 116742953
+rotate n: 2129561426
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 1339937002
+===== inorder round ======
+n: 2894277172
+node color: Black
+tree level: 1
+start n: 2894277172
+xor n: 3670648569
+rotate n: 2207770192
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 4241100914
+initial state: [228493565, 2837675884, 1339937002, 4241100914]
+next state: [164425062, 1328614688, 307935411, 2840410790]
+===== inorder round ======
+n: 4230898793
+node color: Black
+tree level: 1
+start n: 4230898793
+xor n: 712302894
+rotate n: 1206414580
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 228493565
+===== inorder round ======
+n: 2785906100
+node color: Red
+tree level: 0
+start n: 2785906100
+xor n: 3934650644
+rotate n: 4241579094
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 3751422858
+===== inorder round ======
+n: 3262965705
+node color: Black
+tree level: 1
+start n: 3262965705
+xor n: 4039337102
+rotate n: 2295904501
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 387887387
+===== inorder round ======
+n: 2894277172
+node color: Red
+tree level: 2
+start n: 2894277172
+xor n: 1707229863
+rotate n: 1016857102
+[src/main.rs:228:5] if node == Node::Red { n.rotate_right(3) } else { n.rotate_right(19) } = 3348332609
+initial state: [228493565, 3751422858, 387887387, 3348332609]
+next state: [164425062, 2242361662, 3650853092, 1947642485]

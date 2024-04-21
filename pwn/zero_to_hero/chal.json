@@ -1,0 +1,12 @@
+{
+    "name": "Zero to Hero",
+    "author": "dm",
+    "description": "Can you snatch victory from the jaws of defeat?\n\n`nc gold.b01le.rs 4005`",
+    "difficulty": "medium",
+    "flag": "bctf{x86_64_r3g1sTer_bL0at_sAVe5_7he_d4y:D_%#$*}",
+    "ports": [
+        4900
+    ],
+    "can_be_auto_deployed": true
+}
+
