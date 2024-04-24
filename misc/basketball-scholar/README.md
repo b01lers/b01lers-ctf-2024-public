@@ -16,8 +16,8 @@ import math
 import base64 
 
 """
-Code mostly taken from this StackOverflow answer: 
-https://stackoverflow.com/a/39225039
+Code mostly taken from this Medium post: 
+https://medium.com/swlh/lsb-image-steganography-using-python-2bbbee2c69a2
 """
 
 # -----------------------------------------------------------
